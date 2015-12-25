@@ -1,0 +1,39 @@
+﻿@inherits System.Web.Mvc.WebViewPage
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html style="font-family:sans-serif">
+<head>
+    <!-- Include the KeyholeCaptcha API -->
+    <script type="text/javascript" src="/KeyholeCaptcha?operation=script&version=1"></script>
+
+    <script type="text/javascript">
+        function successCallback()
+        {
+            alert("Passphrase was confirmed.");
+            window.location = "/BusinessLogic?id=" + KeyholeCaptcha.requestGuid;
+        }
+
+        window.onload = function () {
+            // Initialize the KeyholeCaptcha control when the page is loaded.
+            // Pass-in a callback method and the control Id where you want the captcha control displayed.
+            KeyholeCaptcha.register(successCallback, "kcDiv");
+        }
+    </script>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>Keyhole Captcha Sample Application</title>
+</head>
+<body stylr>
+    <div>
+        Keyhole Captcha sample integration. 
+
+        <br/>   
+        <br/> 
+
+        <div id="kcDiv" style="position:absolute;top:100px;left:100px"></div>
+    </div>
+</body>
+</html>
