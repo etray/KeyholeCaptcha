@@ -99,7 +99,7 @@ if (typeof KeyholeCaptcha === "undefined") {
                     kcLogo.src = this.kcLogoBase64;
 
                     var kcLogoLink = document.createElement("a");
-                    kcLogoLink.href = "http://wwww.github.com";
+                    kcLogoLink.href = "https://github.com/etray/KeyholeCaptcha";
                     kcLogoLink.style.border = 0;
                     kcLogoLink.style.outline = 0;
                     kcLogoLink.target="_blank";
