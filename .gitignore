@@ -45,3 +45,11 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
+
+# assorted .NET undesirables
+*.suo
+[Oo]bj
+[Bb]in
+[Dd]ebug
+[Pp]ackages
+*.dll
