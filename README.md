@@ -52,11 +52,11 @@ discernable by a machine and more readable by a human.
 
 ###In page HTML: 
 
-1. Add the script include:
+1. Add the script include
+2. Register the api, and it does the rest
 ```html
 	<script src="/KeyholeCaptcha?operation=script&version=1"></script>
 ```
-2. Register the api, and it does the rest:
 ```javascript
 	window.onload = function () {
 
