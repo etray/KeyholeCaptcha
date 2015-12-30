@@ -5,7 +5,7 @@ but still comfortably readable by humans becasue of our [Visual Short Term Memor
 ![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Keyhole.gif?raw=true "Keyhole")
 ![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Captcha.gif?raw=true "Captcha")
 
-![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Screenshot.gif?raw=true "Screenshot")
+![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Screenshot.png?raw=true "Screenshot")
 
 ##Features: 
 - Dynamic image generation
