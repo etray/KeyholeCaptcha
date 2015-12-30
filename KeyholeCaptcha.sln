@@ -38,6 +38,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplic
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{9D1256E2-386C-4567-9E8F-491BA7DF3FDC}"
+	ProjectSection(SolutionItems) = preProject
+		KeyholeCaptcha\Docs\Whitepaper.rtf = KeyholeCaptcha\Docs\Whitepaper.rtf
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

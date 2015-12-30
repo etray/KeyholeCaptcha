@@ -1,23 +1,21 @@
-KeyholeCaptcha is a full-featured, open-source moving captcha system that
-relies on the same human ability to filter out noise as is used in static
-image catcha, but with better readability.
-
-It picks up where other video captcha schemes leave off, by relying less on
-motion and more on noise. The result is that individual frames are less
-discernable by a machine and more readable by a human.
+KeyholeCaptcha is a ready-to-use, moving captcha system that operates by
+keeping text continuously obscured, and therefore invisible to machine vision,
+but still comfortably readable by humans becasue of our [Visual Short Term Memory](https://en.wikipedia.org/wiki/Visual_short-term_memory "Wikipedia"). 
 
 ![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Keyhole.gif?raw=true "Keyhole")
 ![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Captcha.gif?raw=true "Captcha")
 
+![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Screenshot.gif?raw=true "Screenshot")
+
 ##Features: 
 - Dynamic image generation
-- Four different visual schemes to choose from
-- Generate phrases using built-in wordlist, or randomly-generated characters
+- Four different visual schemes
+- Generate phrasess using built-in wordlist or randomly-generated characters
 - Passphrase validation and session persistence
 - Cryptographically secure random number generation
 - Brute force attack detection and prevention
 - Code examples and reference implementation that is easy to understand and use
-- Compact and lightweight client-side AJAX controls
+- Compact, lightweight client-side AJAX controls
 - Commercial-friendly, MIT-style license
 
 ##Contents:
@@ -25,7 +23,7 @@ discernable by a machine and more readable by a human.
   KeyholeCaptcha.dll.
 - **ImageProtoypingApplication** - Windows Forms application that demonstrates
   available schemes and is helpful for prototyping new ones.
-- **WebApplication** - Sample ASP.NET web service that integrates KeyholeCaptcha.
+- **WebApplication** - Sample ASP.NET web service which integrates KeyholeCaptcha.
 - **UnitTest** - tests used to prototype core functionality. Helpful for
   testing future changes.
 
@@ -37,7 +35,8 @@ discernable by a machine and more readable by a human.
 (For a hands-on example, see the WebApplication project)
 ###Integrating into a web service:
 
-1. Add the KeyholeCaptcha.dll assmbly to your .NET web application references and add it to your deployed assmblies
+1. Add the KeyholeCaptcha.dll assmbly to your .NET web application references and 
+   make sure it is included in your deployed application
 
 2. Modify Web.config to include the KeyholeCaptcha Http handler:
 
@@ -52,11 +51,11 @@ discernable by a machine and more readable by a human.
 
 ###In page HTML: 
 
-1. Add the script include
-2. Register the api, and it does the rest
+1. Add the script include:
 ```html
 	<script src="/KeyholeCaptcha?operation=script&version=1"></script>
 ```
+2. Register the api, and it does the rest:
 ```javascript
 	window.onload = function () {
 
@@ -77,7 +76,7 @@ discernable by a machine and more readable by a human.
 
 ###Business Logic:
 	
-1. Client should pass the validated id into the web service.
+1. Client passes the validated id into the web service, and the server checks it before proceeding with business logic.
 
 2. If captcha guess was correct, the id will be recognized as validated (exactly once), and business logic can proceed confidently
 

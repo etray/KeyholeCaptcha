@@ -30,18 +30,36 @@ namespace KeyholeCaptcha.Core.PhraseGenerators
 {
     public class WordListPhraseGenerator : PhraseGenerator
     {
-        public IList<string> WordList { get; private set; }
+        private static IList<string> wordListBackingValue = new List<string>(); 
+        public IList<string> WordList 
+        { 
+            get
+            {
+                lock (wordListBackingValue)
+                {
+                    if (wordListBackingValue.Count <= 0)
+                    {
+                        LoadWordList(KeyholeCaptcha.resources.wordlist);
+                    }
+                }
+
+                return wordListBackingValue;
+            }
+             
+            private set
+            {
+                wordListBackingValue = value;            
+            }
+        }
 
         public WordListPhraseGenerator()
         {
-            WordList = new List<string>();
-            LoadWordList(KeyholeCaptcha.resources.wordlist);
         }
 
-        public WordListPhraseGenerator(string wordList) : this()
-        {
-            LoadWordList(wordList);
-        }
+        //public WordListPhraseGenerator(string wordList) : this()
+        //{
+        //    LoadWordList(wordList);
+        //}
 
         // from byte[] resource
         public void LoadWordList(byte[] wordList)
@@ -59,33 +77,33 @@ namespace KeyholeCaptcha.Core.PhraseGenerators
                     {
                         if (!string.IsNullOrWhiteSpace(line) && line[0] != '#')
                         {
-                            WordList.Add(line.Trim());
+                            wordListBackingValue.Add(line.Trim());
                         }
                     }
                 }
             }
         }
 
-        // from filename
-        public void LoadWordList(string wordList)
-        {
-            if (!File.Exists(wordList))
-            {
-                throw new Exception("Word list file: '" + wordList + "' not found.");
-            }
+        //// from filename
+        //public void LoadWordList(string wordList)
+        //{
+        //    if (!File.Exists(wordList))
+        //    {
+        //        throw new Exception("Word list file: '" + wordList + "' not found.");
+        //    }
 
-            string line;
-            using (System.IO.StreamReader file = new System.IO.StreamReader(wordList))
-            {
-                while ((line = file.ReadLine()) != null)
-                {
-                    if (!string.IsNullOrWhiteSpace(line) && line[0] != '#')
-                    {
-                        WordList.Add(line.Trim());
-                    }
-                }
-            }
-        }
+        //    string line;
+        //    using (System.IO.StreamReader file = new System.IO.StreamReader(wordList))
+        //    {
+        //        while ((line = file.ReadLine()) != null)
+        //        {
+        //            if (!string.IsNullOrWhiteSpace(line) && line[0] != '#')
+        //            {
+        //                wordListBackingValue.Add(line.Trim());
+        //            }
+        //        }
+        //    }
+        //}
 
         override public string RandomPhrase()
         {

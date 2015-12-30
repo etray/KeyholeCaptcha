@@ -19,7 +19,7 @@ namespace UnitTest.Core
         [TestMethod]
         public void AnimateTest()
         {
-            PhraseGenerator generator = new WordListPhraseGenerator("..\\..\\..\\KeyholeCaptcha\\wordlist.dat");
+            PhraseGenerator generator = new WordListPhraseGenerator();
             int numFrames = 20;
             Rectangle imageBox = new Rectangle(0, 0, 200, 80);
             Animator maker = new Animator(imageBox.Width, imageBox.Height);

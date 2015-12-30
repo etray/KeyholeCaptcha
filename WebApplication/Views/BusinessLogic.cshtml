@@ -12,9 +12,21 @@
 </head>
 <body>
     <div>
-        @(ViewBag.welcomeMessage)
+        <h2 style="@getStyle(ViewBag.success)">@(ViewBag.welcomeMessage)</h2>
     </div>
     <br>
     <a href="/"><< back</a>
 </body>
 </html>
+
+@helper getStyle(bool success)
+{
+    if (success)
+    {
+        @("color:green")
+    }
+    else
+    {
+        @("color:red")
+    }
+}

@@ -13,7 +13,7 @@ namespace UnitTest.Core
 
         public PhraseGeneratorTests()
         {
-            PhraseGenerator = new WordListPhraseGenerator("..\\..\\..\\KeyholeCaptcha\\wordlist.dat");
+            PhraseGenerator = new WordListPhraseGenerator();
         }
 
         [TestMethod]

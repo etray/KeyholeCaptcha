@@ -21,14 +21,14 @@ namespace WebApplication.Controllers
             {
                 // business logic
                 ViewBag.welcomeMessage = "Welcome, human!";
-                return View("~/Views/BusinessLogic.cshtml");
+                ViewBag.success = true;
             }
             else
             {
-                // logic to handle spoofing, re-use of previously used ids
                 ViewBag.welcomeMessage = "Begone, machine!";
-                return View("~/Views/BusinessLogic.cshtml");
+                ViewBag.success = false;
             }
+            return View("~/Views/BusinessLogic.cshtml");
         }
     }
 }
