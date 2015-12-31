@@ -30,6 +30,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{B1F23A
 	ProjectSection(SolutionItems) = preProject
 		Images\Captcha.gif = Images\Captcha.gif
 		Images\Keyhole.gif = Images\Keyhole.gif
+		Images\Screenshot.png = Images\Screenshot.png
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication", "WebApplication\WebApplication.csproj", "{2C2D0FFE-2235-40DF-BA13-26499E7AF5CB}"

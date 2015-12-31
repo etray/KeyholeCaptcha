@@ -1,4 +1,4 @@
-﻿// Copyright (c) 2015 - Elton T. Ray
+﻿// Copyright (c) 2015-2016 - Elton T. Ray
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
 // of this software and associated documentation files (the "Software"), to
@@ -56,11 +56,6 @@ namespace KeyholeCaptcha.Core.PhraseGenerators
         {
         }
 
-        //public WordListPhraseGenerator(string wordList) : this()
-        //{
-        //    LoadWordList(wordList);
-        //}
-
         // from byte[] resource
         public void LoadWordList(byte[] wordList)
         {
@@ -83,27 +78,6 @@ namespace KeyholeCaptcha.Core.PhraseGenerators
                 }
             }
         }
-
-        //// from filename
-        //public void LoadWordList(string wordList)
-        //{
-        //    if (!File.Exists(wordList))
-        //    {
-        //        throw new Exception("Word list file: '" + wordList + "' not found.");
-        //    }
-
-        //    string line;
-        //    using (System.IO.StreamReader file = new System.IO.StreamReader(wordList))
-        //    {
-        //        while ((line = file.ReadLine()) != null)
-        //        {
-        //            if (!string.IsNullOrWhiteSpace(line) && line[0] != '#')
-        //            {
-        //                wordListBackingValue.Add(line.Trim());
-        //            }
-        //        }
-        //    }
-        //}
 
         override public string RandomPhrase()
         {
