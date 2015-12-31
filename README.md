@@ -1,11 +1,11 @@
 KeyholeCaptcha is a ready-to-use, moving captcha system that operates by
-keeping text continuously obscured, and therefore invisible to machine vision,
-but still comfortably readable by humans becasue of our [Visual Short Term Memory](https://en.wikipedia.org/wiki/Visual_short-term_memory "Wikipedia"). 
+keeping text continuously obscured, and therefore invisible to computer vision,
+but still comfortably readable by humans becasue of [visual short term memory](https://en.wikipedia.org/wiki/Visual_short-term_memory "Wikipedia"). 
 
 ![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Keyhole.gif?raw=true "Keyhole")
 ![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Captcha.gif?raw=true "Captcha")
 
-![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Screenshot.gif?raw=true "Screenshot")
+![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Screenshot.png?raw=true "Screenshot")
 
 ##Features: 
 - Dynamic image generation
