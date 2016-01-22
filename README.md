@@ -1,6 +1,6 @@
 KeyholeCaptcha is a ready-to-use, moving captcha system that operates by
 keeping text continuously obscured, and therefore invisible to computer vision,
-but still comfortably readable by humans becasue of [visual short term memory](https://en.wikipedia.org/wiki/Visual_short-term_memory "Wikipedia"). 
+but still comfortably readable by humans because of [visual short term memory](https://en.wikipedia.org/wiki/Visual_short-term_memory "Wikipedia"). 
 
 ![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Keyhole.gif?raw=true "Keyhole")
 ![alt text](https://github.com//etray/KeyholeCaptcha/blob/master/Images/Captcha.gif?raw=true "Captcha")
@@ -10,7 +10,7 @@ but still comfortably readable by humans becasue of [visual short term memory](h
 ##Features: 
 - Dynamic image generation
 - Four different visual schemes
-- Generate phrasess using built-in wordlist or randomly-generated characters
+- Generate phrases using built-in wordlist or randomly-generated characters
 - Passphrase validation and session persistence
 - Cryptographically secure random number generation
 - Brute force attack detection and prevention
@@ -84,6 +84,8 @@ but still comfortably readable by humans becasue of [visual short term memory](h
     if (KeyholeCaptcha.Core.Validator.IsValidatedGuid(id))
     {
         // Welcome, human!
+
+		// business logic...
     }
     else
     {

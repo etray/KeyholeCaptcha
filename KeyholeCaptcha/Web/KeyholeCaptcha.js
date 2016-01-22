@@ -166,15 +166,17 @@ if (typeof KeyholeCaptcha === "undefined") {
                 },
 
                 reload: function () {
+                    var textInput = document.getElementById(this.kcPrefix + "guess");
+                    textInput.value = "";
+                    var self = this;
+                    var captchaSpan = document.getElementById(this.kcPrefix + "captchaSpan");
+                    captchaSpan.innerHTML = "";
                     this.setMessage(this.defaultMessage);
                     var operationUrl = this.captchaServiceUrl + "?operation=reload&id=" + this.requestGuid + "&q=" + this.noCacheString();
-                    var captchaImage = document.createElement("img");
+                    var captchaImage = new Image();
+                    captchaImage.onload = function () { captchaSpan.appendChild(captchaImage); };
+                    captchaImage.onerror = function () { self.setMessage("Session expired. Reload page."); };
                     captchaImage.src = operationUrl;
-                    var captchaSpan = document.getElementById(this.kcPrefix + "captchaSpan");
-
-                    captchaSpan.innerHTML = "";
-
-                    captchaSpan.appendChild(captchaImage);
                 },
 
                 noCacheString: function ()
